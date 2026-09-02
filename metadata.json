@@ -1,0 +1,6 @@
+{
+  "name": "Company Cash Flow Workspace",
+  "description": "Automated enterprise cash flow management workspace featuring multimodal Gemini AI transfer/receipt parser, multi-account ledger, approval queue, and cash runway predictive analytics.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

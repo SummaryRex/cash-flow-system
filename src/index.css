@@ -1,0 +1,77 @@
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: 'Plus Jakarta Sans', sans-serif;
+  
+  --color-background: #F8FAFC;
+  --color-foreground: #0F172A;
+  --color-card: rgba(255, 255, 255, 0.75);
+  --color-card-foreground: #0F172A;
+  
+  --color-primary: #4F46E5;
+  --color-primary-foreground: #FFFFFF;
+  
+  --color-secondary: #EC4899;
+  --color-secondary-foreground: #FFFFFF;
+  
+  --color-accent: #8B5CF6;
+  --color-muted: #F1F5F9;
+  --color-muted-foreground: #64748B;
+  --color-border: rgba(226, 232, 240, 0.8);
+  
+  --color-success: #10B981;
+  --color-danger: #F43F5E;
+  --color-warning: #F59E0B;
+}
+
+body {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  background-color: #F8FAFC;
+  color: #0F172A;
+  -webkit-font-smoothing: antialiased;
+  position: relative;
+  overflow-x: hidden;
+  min-height: 100vh;
+}
+
+/* Colorful mesh background */
+body::before, body::after {
+  content: '';
+  position: fixed;
+  width: 600px;
+  height: 600px;
+  border-radius: 50%;
+  z-index: -1;
+  filter: blur(100px);
+  opacity: 0.15;
+  pointer-events: none;
+}
+
+body::before {
+  top: -200px;
+  left: -100px;
+  background: radial-gradient(circle, #4F46E5, #8B5CF6);
+}
+
+body::after {
+  bottom: -200px;
+  right: -100px;
+  background: radial-gradient(circle, #EC4899, #F59E0B);
+}
+
+/* Glassmorphism utilities */
+.glass-panel {
+  background: rgba(255, 255, 255, 0.75);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(255, 255, 255, 0.6);
+  box-shadow: 0 4px 12px -2px rgba(0, 0, 0, 0.05), 0 2px 6px -1px rgba(0, 0, 0, 0.03);
+}
+
+.gradient-text {
+  background: linear-gradient(135deg, #4F46E5, #EC4899);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
